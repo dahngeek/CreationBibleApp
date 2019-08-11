@@ -9,7 +9,11 @@
         <g-link class="nav__link" to="/about">About</g-link>
       </nav>
     </header>
-    <slot/>
+    <transition name="fade" appear>
+      <main> <!-- a wrapper for slot is needed -->
+        <slot /> <!-- the content -->
+      </main>
+    </transition>
   </div>
 </template>
 
@@ -47,4 +51,18 @@ body {
 .nav__link {
   margin-left: 20px;
 }
+
+.fade-enter-active {
+  transition-duration: 0.5s;
+  transition-property: height, opacity, transform;
+  transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+  overflow: hidden;
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translate(2em, 0);
+}
+
+
 </style>
