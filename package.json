@@ -11,7 +11,7 @@
     "@gridsome/transformer-remark": "^0.3.2",
     "bulma": "^0.7.5",
     "gridsome": "^0.6.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "sass-loader": "^7.2.0",
     "vue-page-transition": "^0.2.2"
   }
